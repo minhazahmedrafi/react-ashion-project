@@ -1,0 +1,98 @@
+@import "../../index.scss";
+#categories {
+  overflow-x: hidden;
+  margin-top: 10px;
+  .womensFashion {
+    .categoriesItemLarge {
+      background-image: url("../../images/categories/category-1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      height: 638px;
+      padding-left: 70px;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      .categoriesText {
+        h1 {
+          font-family: "Cookie", cursive;
+          color: $primaryText;
+          font-size: 70px;
+          font-weight: 400;
+        }
+        p {
+          font-size: 14px;
+          color: #666666;
+          font-weight: 400;
+          line-height: 24px;
+          margin: 0 0 15px 0;
+          margin-bottom: 15px;
+        }
+        a {
+          font-size: 14px;
+          color: $primaryText;
+          text-transform: uppercase;
+          font-weight: 600;
+          position: relative;
+          padding: 0 0 3px;
+          display: inline-block;
+          border-bottom: 2px solid $textColor;
+        }
+      }
+    }
+  }
+  .categoriesItemSmall {
+    background-image: url("../../images/categories/category-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 314px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    .categoriesText {
+      h4 {
+        font-size: 24px;
+        margin: 0;
+        font-weight: 700;
+      }
+      p {
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+        color: #666666;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 0 0 15px 0;
+        margin-bottom: 10px;
+      }
+      a {
+        @include primaryBtn();
+      }
+    }
+  }
+  .kidsFashion {
+    .categoriesItemSmall {
+      background-image: url("../../images/categories/category-3.jpg");
+    }
+  }
+  .cosmetics {
+    .categoriesItemSmall {
+      background-image: url("../../images/categories/category-4.jpg");
+    }
+  }
+  .accessories {
+    .categoriesItemSmall {
+      background-image: url("../../images/categories/category-5.jpg");
+    }
+  }
+}
+@media (max-width: 991px) {
+  #categories .womensFashion .categoriesItemLarge {
+    padding-left: 40px;
+  }
+  #product .productHeader {
+    display: block !important;
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../index.scss";
+.heading {
+  h4 {
+    color: $primaryText;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      height: 2px;
+      width: 70px;
+      background: $textColor;
+      content: "";
+    }
+  }
+}

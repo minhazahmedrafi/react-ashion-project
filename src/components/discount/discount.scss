@@ -1,0 +1,87 @@
+@import "../../index.scss";
+#discount {
+  padding: 3rem 0;
+
+  .discountLeft {
+    img {
+      height: 380px;
+      width: 100%;
+    }
+  }
+  .discountRight {
+    background: #f4f4f4;
+    height: 380px;
+    padding: 75px 90px 50px;
+    text-align: center;
+    a {
+      @include primaryBtn();
+    }
+
+    .discountText {
+      position: relative;
+      z-index: 1;
+      span {
+        font-size: 12px;
+        color: $primaryText;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      h2 {
+        font-size: 60px;
+        color: $textColor;
+        font-family: "Cookie", cursive;
+        line-height: 46px;
+        margin-bottom: 10px;
+      }
+      h5 {
+        color: $textColor;
+        font-weight: 700;
+        font-size: 18px;
+        span {
+          font-size: 14px;
+          color: $primaryText;
+          margin-right: 4px;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        left: 50%;
+        top: -38px;
+        height: 183px;
+        width: 183px;
+        background: #ffffff;
+        content: "";
+        border-radius: 50%;
+        z-index: -1;
+        margin-left: -91.5px;
+      }
+    }
+    .discountCountdown {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 1rem;
+      .countdownItem {
+        p {
+          font-size: 30px;
+          font-weight: 600;
+          color: $primaryText;
+          display: inline-block;
+
+          span {
+            font-weight: 500;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  #discount .discountRight {
+    padding: 75px 20px 50px;
+  }
+  #discount .discountRight .discountText h2 {
+    font-size: 40px;
+  }
+}

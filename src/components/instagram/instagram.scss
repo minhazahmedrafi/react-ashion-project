@@ -1,0 +1,55 @@
+@import "../../index.scss";
+#instagram {
+  overflow-x: hidden;
+  .singleInstagram {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .sInstaLink {
+      text-align: center;
+      position: absolute;
+      bottom: 50%;
+      z-index: 2;
+      transform: translateY(50%);
+      opacity: 0;
+      -webkit-transition: all, 0.3s;
+      -o-transition: all, 0.3s;
+      transition: all, 0.3s;
+      a {
+        font-size: 16px;
+        color: $primaryText;
+        font-weight: 500;
+        display: block;
+        margin-top: 10px;
+      }
+      svg {
+        font-size: 24px;
+        color: $primaryText;
+      }
+    }
+    &::after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      content: "";
+      opacity: 0;
+      z-index: -1;
+      -webkit-transition: all, 0.3s;
+      -o-transition: all, 0.3s;
+      transition: all, 0.3s;
+    }
+    &:hover {
+      &::after {
+        opacity: 1;
+        z-index: 1;
+      }
+      .sInstaLink {
+        opacity: 1;
+      }
+    }
+  }
+}

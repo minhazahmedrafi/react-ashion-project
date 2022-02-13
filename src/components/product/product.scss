@@ -1,0 +1,116 @@
+@import "../../index.scss";
+#product {
+  .productHeader {
+    display: flex;
+    justify-content: space-between;
+    .nav {
+      .nav-item {
+        .nav-link {
+          font-size: 14px;
+          list-style: none;
+          display: inline-block;
+          color: $primaryText;
+          margin-left: 35px;
+          position: relative;
+          cursor: pointer;
+          background-color: transparent;
+          padding: 0;
+          border-radius: 0;
+          transition: none;
+          &.active {
+            border-bottom: 2px solid $textColor;
+          }
+        }
+      }
+    }
+  }
+  .tab-content {
+    .allContents {
+      .singleProduct {
+        margin-bottom: 2rem;
+        .productImg {
+          position: relative;
+          .imageIcons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            transition: all, 0.3s;
+            opacity: 0;
+
+            .arrow,
+            .heart,
+            .bag {
+              font-size: 18px;
+              color: $primaryText;
+              display: block;
+              height: 45px;
+              width: 45px;
+              background: #fff;
+              line-height: 45px;
+              text-align: center;
+              border-radius: 50%;
+              transition: all, 0.3s;
+              margin: 0px 6px;
+              cursor: pointer;
+              &:hover {
+                background-color: $textColor;
+                color: #fff;
+                transform: rotate(360deg);
+              }
+            }
+          }
+        }
+        .productContent {
+          text-align: center;
+          padding-top: 22px;
+          a {
+            font-size: 16px;
+            color: #111111;
+          }
+
+          span {
+            color: $primaryText;
+            font-weight: 600;
+          }
+        }
+
+        &:hover {
+          .imageIcons {
+            opacity: 1 !important;
+            .arrow,
+            .heart,
+            .bag {
+              margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  #product .productHeader .nav .nav-item .nav-link {
+    margin-left: 0px !important;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  ul#pills-tab {
+    margin-top: 1rem;
+  }
+  .tab-content {
+    margin-top: -2rem !important;
+  }
+  #product .tab-content .allContents .singleProduct .productImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 576px) {
+  #banner .bannerContent h1 {
+    font-size: 40px;
+  }
+}

@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+
+$primaryText: #111;
+$textColor: #ca1515;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  background-color: transparent;
+  color: inherit;
+}
+.pad {
+  padding: 60px 0px;
+}
+.starts {
+  svg {
+    font-size: 12px;
+    color: #e3c01c;
+  }
+}
+@mixin primaryBtn {
+  font-size: 14px;
+  color: $primaryText;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  padding: 0 0 3px;
+  display: inline-block;
+  border-bottom: 2px solid $textColor;
+}

@@ -1,0 +1,33 @@
+@import "../../index.scss";
+#trend {
+  .heading {
+    h4 {
+      font-size: 20px;
+    }
+  }
+  .trendHead {
+    margin-bottom: 2rem;
+  }
+  .singleTrend {
+    padding: 0 0.5rem;
+    .trendItem {
+      display: flex;
+      overflow: hidden;
+      margin-bottom: 35px;
+      .itemImg {
+        margin-right: 1.4rem;
+      }
+      .itemContent {
+        p {
+          font-size: 14px;
+          color: $primaryText;
+          margin-bottom: 0px;
+        }
+        span {
+          color: $primaryText;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

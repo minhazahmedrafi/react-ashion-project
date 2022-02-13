@@ -1,0 +1,48 @@
+@import "../../index.scss";
+#banner {
+  background: url("../../images/banner-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 500px;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  .swiper {
+    height: 100%;
+    padding: 8rem 0;
+    .swiper-wrapper {
+      transition-duration: 1s !important;
+    }
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        height: 12px;
+        width: 12px;
+        background: #a1a1a1;
+        border-radius: 50%;
+        &.swiper-pagination-bullet-active {
+          background-color: $textColor;
+        }
+      }
+    }
+  }
+
+  .bannerContent {
+    span {
+      font-size: 18px;
+      color: $textColor;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: 80px;
+      color: $primaryText;
+      font-family: "Cookie", cursive;
+      margin-bottom: 15px;
+    }
+    a {
+      @include primaryBtn();
+    }
+  }
+}
